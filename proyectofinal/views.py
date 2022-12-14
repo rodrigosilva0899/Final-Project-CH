@@ -17,7 +17,6 @@ class PortfolioCrear(CreateView):
   success_url = "/detalle-Portfolio"
   fields = ["empresa", "ticker", "media", "sdev", "weight"]
 
-
 # View operaciones
 
 def mostrar_operaciones(request):
