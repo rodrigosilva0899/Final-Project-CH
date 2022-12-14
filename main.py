@@ -1,1 +1,1 @@
-print('gol')
+print("gol")
