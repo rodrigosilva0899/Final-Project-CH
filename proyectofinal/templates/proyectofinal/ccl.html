@@ -1,0 +1,15 @@
+{% extends 'proyectofinal/base.html' %}
+{% block titulo%} CCl {% endblock %}
+{% block subtitulo %}Contado con liquidación implícito{% endblock %}
+{% block contenido %}
+    {% for ccl in detalle_ccl %}
+      <ul>
+          <li> Empresa: {{ccl.empresa}} -
+            Ticker: {{ccl.ticker}} -
+            Precio Cedear: {{ccl.precio_arg}} -
+            Ratio de conversión: {{ccl.ratio}} -
+            Precio Acción USA: {{ccl.precio_usa}} -
+          </li>
+      </ul>
+    {% endfor %}
+{% endblock %}

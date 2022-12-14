@@ -12,26 +12,17 @@ class Operacion(models.Model):
 def __str__(self):
     return f"{self.id}, {self.fecha}, {self.cliente}, {self.direccion}, {self.usd}, {self.fx_rate}"
 
-# Modelo CEDEAR
+# Modelo CCL - Contado con liqui implicito
 
-class Cedear(models.Model):
+class CCL(models.Model):
     empresa = models.CharField(max_length=100)
     ticker = models.CharField(max_length=10)
-    precio = models.FloatField()
+    precio_arg = models.FloatField()
     ratio = models.IntegerField()
+    precio_usa = models.FloatField()
 
 def __str__(self):
-    return f"{self.empresa}, {self.ticker}, {self.precio}, {self.ratio}"
-
-# Modelo Accion USA
-
-class AccionUSA(models.Model):
-    empresa = models.CharField(max_length=100)
-    ticker = models.CharField(max_length=10)
-    precio = models.FloatField()
-
-def __str__(self):
-    return f"{self.empresa}, {self.ticker}, {self.precio}"
+    return f"{self.empresa}, {self.ticker}, {self.precio_arg}, {self.ratio}, {self.precio_usa}"
 
 # Modelo Portfolio Acciones
 
