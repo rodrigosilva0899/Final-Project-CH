@@ -12,12 +12,12 @@
 
     {% for operacion in detalle_operaciones %}
         <ul>
-            <li> Numero Operación: {{operacion.id}},
-                Fecha: {{operacion.fecha}},
-                Cliente: {{operacion.cliente}},
-                Dirección: {{operacion.direccion}},
-                Monto USD: {{operacion.usd}},
-                px: {{operacion.fx_rate}},
+            <li> Numero Operación: {{operacion.id}} -
+                Fecha: {{operacion.fecha}} -
+                Cliente: {{operacion.cliente}} -
+                Dirección: {{operacion.direccion}} -
+                Monto USD: {{operacion.usd}} -
+                px: {{operacion.fx_rate}}
             </li>
         </ul>
     {% endfor %}

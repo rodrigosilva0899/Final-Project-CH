@@ -11,3 +11,12 @@ class Operacion(models.Model):
 
 def __str__(self):
     return f"{self.id}, {self.fecha}, {self.cliente}, {self.direccion}, {self.usd}, {self.fx_rate}"
+
+class Cedear(models.Model):
+    empresa = models.CharField(max_length=100)
+    ticker = models.CharField(max_length=10)
+    precio = models.FloatField()
+    ratio = models.IntegerField()
+
+def __str__(self):
+    return f"{self.ticker}, {self.precio}, {self.ratio}"
