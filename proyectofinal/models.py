@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Modelo operaciones
 
 class Operacion(models.Model):
     fecha = models.DateField()
@@ -12,6 +12,8 @@ class Operacion(models.Model):
 def __str__(self):
     return f"{self.id}, {self.fecha}, {self.cliente}, {self.direccion}, {self.usd}, {self.fx_rate}"
 
+# Modelo CEDEAR
+
 class Cedear(models.Model):
     empresa = models.CharField(max_length=100)
     ticker = models.CharField(max_length=10)
@@ -19,4 +21,14 @@ class Cedear(models.Model):
     ratio = models.IntegerField()
 
 def __str__(self):
-    return f"{self.ticker}, {self.precio}, {self.ratio}"
+    return f"{self.empresa}, {self.ticker}, {self.precio}, {self.ratio}"
+
+# Modelo Accion USA
+
+class AccionUSA(models.Model):
+    empresa = models.CharField(max_length=100)
+    ticker = models.CharField(max_length=10)
+    precio = models.FloatField()
+
+def __str__(self):
+    return f"{self.empresa}, {self.ticker}, {self.precio}"

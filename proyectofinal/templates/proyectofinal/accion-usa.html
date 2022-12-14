@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Lista de Acciones USA</h1>
+
+    {% for accion_usa in detalle_accion_usa %}
+        <ul>
+            <li> Empresa: {{accion_usa.empresa}} -
+                Ticker: {{accion_usa.ticker}} -
+                Precio: {{accion_usa.precio}} -
+            </li>
+        </ul>
+    {% endfor %}
+
+</body>
+</html>
