@@ -1,5 +1,22 @@
 from django.shortcuts import render
 from proyectofinal.models import Operacion, CCL, Portfolio
+from django.views.generic import CreateView
+
+class CCLcrear(CreateView):
+  model = CCL
+  success_url = "/ccl"
+  fields = ["empresa", "ticker", "precio_arg", "ratio", "precio_usa"]
+
+class OperacionCrear(CreateView):
+  model = Operacion
+  success_url = "/operaciones"
+  fields = ["fecha", "cliente", "direccion", "usd", "fx_rate"]
+
+class PortfolioCrear(CreateView):
+  model = Portfolio
+  success_url = "/detalle-Portfolio"
+  fields = ["empresa", "ticker", "media", "sdev", "weight"]
+
 
 # View operaciones
 

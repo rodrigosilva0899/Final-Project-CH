@@ -1,0 +1,12 @@
+{% extends 'proyectofinal/base.html' %}
+{% block titulo%} Portfolio {% endblock %}
+{% block subtitulo %}Cargar la información de la acción:{% endblock %}
+{% block contenido %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="agregar">
+    </form>
+
+{% endblock %}
