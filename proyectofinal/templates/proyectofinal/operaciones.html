@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-    <h1>Lista de operaciones</h1>
-
+{% extends 'proyectofinal/base.html' %}
+{% block titulo%} Operaciones {% endblock %}
+{% block subtitulo %}Lista de Operaciones{% endblock %}
+{% block contenido %}
     {% for operacion in detalle_operaciones %}
-        <ul>
-            <li> Numero Operación: {{operacion.id}} -
-                Fecha: {{operacion.fecha}} -
-                Cliente: {{operacion.cliente}} -
-                Dirección: {{operacion.direccion}} -
-                Monto USD: {{operacion.usd}} -
-                px: {{operacion.fx_rate}}
-            </li>
-        </ul>
+      <ul>
+          <li> Numero Operación: {{operacion.id}} -
+            Fecha: {{operacion.fecha}} -
+            Cliente: {{operacion.cliente}} -
+            Dirección: {{operacion.direccion}} -
+            Monto USD: {{operacion.usd}} -
+            px: {{operacion.fx_rate}}
+          </li>
+      </ul>
     {% endfor %}
-
-</body>
-</html>
+{% endblock %}
