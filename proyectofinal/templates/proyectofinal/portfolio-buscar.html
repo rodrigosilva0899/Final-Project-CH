@@ -1,0 +1,20 @@
+{% extends 'proyectofinal/base.html' %}
+{% block titulo%} Buscar acción del portfolio {% endblock %}
+{% block contenido %}
+<form action="/portfolio/buscar" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value="Submit">
+</form>
+
+{% for portfolio in detalle_portfolio %}
+    <ul>
+        <li> Empresa: {{portfolio.empresa}} -
+            Ticker: {{portfolio.ticker}} -
+            Media: {{portfolio.media}} -
+            Desvío Estándar: {{portfolio.sdev}} -
+            Ponderación: {{portfolio.weight}}
+        </li>
+    </ul>
+{% endfor %}
+{% endblock %}

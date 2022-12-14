@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from proyectofinal.views import mostrar_operaciones, mostrar_ccl, portfolio, CCLcrear, OperacionCrear, PortfolioCrear
+from proyectofinal.views import mostrar_operaciones, mostrar_ccl, portfolio, CCLcrear, OperacionCrear, PortfolioCrear, BuscarPortfolio
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -25,4 +25,5 @@ urlpatterns = [
     path('ccl-form/crear', CCLcrear.as_view()),
     path('operacion-form/crear', OperacionCrear.as_view()),
     path('portfolio-form/crear', PortfolioCrear.as_view()),
+    path('portfolio/buscar', BuscarPortfolio.as_view()),
 ]
