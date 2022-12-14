@@ -32,3 +32,15 @@ class AccionUSA(models.Model):
 
 def __str__(self):
     return f"{self.empresa}, {self.ticker}, {self.precio}"
+
+# Modelo Portfolio Acciones
+
+class Portfolio(models.Model):
+   empresa = models.CharField(max_length=100)
+   ticker = models.CharField(max_length=10)
+   media = models.FloatField()
+   sdev = models.FloatField()
+   weight = models.FloatField()
+
+def __str__(self):
+    return f"{self.empresa}, {self.ticker}, {self.media}, {self.sdev}, {self.weight}"

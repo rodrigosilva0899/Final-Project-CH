@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from proyectofinal.models import Operacion, Cedear, AccionUSA
+from proyectofinal.models import Operacion, Cedear, AccionUSA, Portfolio
 
 # View operaciones
 
@@ -18,3 +18,9 @@ def mostrar_cedears(request):
 def mostrar_accion_usa(request):
   detalle_accion_usa = AccionUSA.objects.all()
   return render(request, "proyectofinal/accion-usa.html", {"detalle_accion_usa": detalle_accion_usa})
+
+# View Portfolio Acciones
+
+def portfolio(request):
+  detalle_portfolio = Portfolio.objects.all()
+  return render(request, "proyectofinal/portfolio.html", {"detalle_portfolio": detalle_portfolio})
